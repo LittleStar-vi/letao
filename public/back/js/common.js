@@ -31,6 +31,7 @@ $(function(){
         // $('.lt_aside').toggleClass("now");
         $('.lt_aside').toggleClass("now");
         $('.lt_main').toggleClass("now");
+        $('.lt_header').toggleClass("now");
     });
 
     //退出功能
