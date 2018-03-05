@@ -13,7 +13,10 @@ $(function(){
     });
 
     $(document).ajaxStop(function(){
-        NProgress.done();
+        setTimeout(function(){
+            NProgress.done();
+        }, 500);
+
         // console.log("ajax end");
 
     });
@@ -54,7 +57,7 @@ $(function(){
             type: "GET",
             url: "/employee/checkRootLogin",
             success: function (info) {
-                console.log(info);
+                // console.log(info);
                 if(info.error == 400){
                     location.href = "login.html";
                 }
