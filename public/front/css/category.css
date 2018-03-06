@@ -1,0 +1,44 @@
+.lt_main .nav{
+    width:90px;
+    height: 100%;
+    float: left;
+    position:relative;
+}
+.nav li a{
+    display: block;
+    line-height: 50px;
+    background-color: pink;
+    border-bottom: 1px solid red;
+    border-right: 1px solid red;
+    text-align: center;
+}
+.nav li.now a{
+    background-color: #fff;
+    border-right:none;
+}
+.lt_main .content{
+    position: relative;
+    height:100%;
+    overflow: hidden;
+}
+.lt_main .content li{
+    float:left;
+    width: 33.33%;
+}
+.content li a{
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.content li a img{
+    width: 62px;
+    height: 62px;
+    margin:0 auto;
+}
+.content .second p{
+    padding: 20px 0 0 20px;
+    font-size: 14px;
+
+}
+
+
