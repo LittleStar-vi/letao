@@ -1,0 +1,23 @@
+.myform{
+    padding: 10px;
+}
+
+.vcode_wrap input{
+    width: 65%;
+}
+.vcode_wrap .get_vcode{
+    width: 30%;
+    height:40px;
+
+}
+.myform .btn_register{
+    width: 100%;
+}
+.myform .tips{
+    font-size: 12px;
+    line-height: 30px;
+}
+.get_vcode.disabled{
+    background-color: #999;
+    border:none;
+}

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>乐淘分类</title>
+    <title>乐淘商城-登录页</title>
     <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="lib/mui/css/mui.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
 <div class="lt_container">
@@ -17,39 +17,37 @@
         <a href="javascript:history.go(-1);" class="icon_left">
             <span class="mui-icon mui-icon-back"></span>
         </a>
-        <h4>乐淘云购</h4>
-        <a href="search.html" class="icon_right">
-            <span class="fa fa-search"></span>
-        </a>
+        <h4>会员中心</h4>
     </div>
 
-    <!--主体区域-->
-    <div class="lt_main">
-        <!--实现区域滚动-->
-        <div class="nav">
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <!--这里放置真实显示的DOM内容-->
-                    <ul class="first mui-clearfix">
-                        <!--挖个坑-->
-                    </ul>
-                </div>
-            </div>
+    <!--用户密码框-->
+    <form class="myform">
+        <div class="mui-input-row">
+            <input type="text" class="mui-input-clear" name="username" autocomplete="off" placeholder="请输入用户名">
+        </div>
+        <div class="mui-input-row">
+            <input type="password" class="mui-input-password" name="password" autocomplete="off" placeholder="请输入密码">
+        </div>
+        <div class="mui-input-row">
+            <input type="password" class="mui-input-password" name="repassword" autocomplete="off" placeholder="请再次输入密码">
+        </div>
+        <div class="mui-input-row">
+            <input type="password" class="mui-input-clear" name="mobile" autocomplete="off" placeholder="请输入手机号">
+        </div>
+        <div class="mui-input-row vcode_wrap">
+            <input type="password" class="mui-input-clear" name="vCode" autocomplete="off" placeholder="请输入验证码">
+            <button class="mui-btn mui-btn-primary get_vcode" >获取验证码</button>
+        </div>
+        <div class="mui-input-row">
+            <button class="mui-btn mui-btn-primary btn_register" >注册</button>
+        </div>
+        <div class="mui-input-row tips">
+            <span class="mui-pull-left"><input type="checkbox" checked>我同意《会员服务协议》</span>
+            <span class="mui-pull-right"><a href="login.html">立即登录</a></span>
         </div>
 
-        <div class="content">
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <!--这里放置真实显示的DOM内容-->
-                    <ul class="second mui-clearfix">
-                        <!--挖个坑-->
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
+        
+    </form>
 
     <!--尾部-->
     <div class="lt_footer">
@@ -82,33 +80,12 @@
     </div>
 </div>
 
-<!--准备模板-->
-<script type="text/html" id="first">
-    {{each rows v i}}
-        <li class="{{i===0?'now':''}}"><a data-id="{{v.id}}" href="javascript:;">{{v.categoryName}}</a></li>
-    {{/each}}
-</script>
-
-<script type="text/html" id="second">
-    {{ if rows.length === 0}}
-       <p class="tips">该分类下没有更多的数据</p>
-    {{/if}}
-
-    {{each rows v i}}
-    <li>
-        <a href="javascript:;">
-            <img src="{{v.brandLogo}}" alt="">
-            <p>{{v.brandName}}</p>
-        </a>
-    </li>
-    {{/each}}
-</script>
 
 
 <script src="lib/mui/js/mui.js"></script>
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
-<script src="js/category.js"></script>
+<script src="js/register.js"></script>
 </body>
 </html>
